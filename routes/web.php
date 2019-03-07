@@ -31,6 +31,8 @@ $router->get('/key', function() {
 //    return base64_encode($bytes);
 //});
 
+//jxkj
+
 $router->group(
     ['middleware' => 'jwt.auth'],
     function() use ($router) {
