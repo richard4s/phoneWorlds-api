@@ -11,6 +11,19 @@
 |
 */
 
+$app->get('/database', function () use ($app) {
+    $db = app()->make('db');
+
+    if ( $db->connection()->getDatabaseName() )
+    {
+        return 'Connected to the DB: ' . $db->connection()->getDatabaseName();
+    }
+    else
+    {
+        return 'Unable to establish database connection...';
+    }
+});
+
 $router->get('/', function () use ($router) {
     return response()->json(['success' => 'Welcome to PhoneWorld!']);
 });
