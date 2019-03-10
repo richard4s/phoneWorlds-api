@@ -11,12 +11,12 @@
 |
 */
 
-$app->get('/database', function () use ($app) {
-    $db = app()->make('db');
+$router->get('/database', function () {
+ //   $db = app()->make('db');
 
-    if ( $db->connection()->getDatabaseName() )
+    if ( DB::connection()->getDatabaseName() )
     {
-        return 'Connected to the DB: ' . $db->connection()->getDatabaseName();
+        return 'Connected to the DB: ' . DB::connection()->getDatabaseName();
     }
     else
     {
