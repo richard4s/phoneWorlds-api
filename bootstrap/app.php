@@ -25,6 +25,8 @@ $app = new Laravel\Lumen\Application(
 
  $app->withEloquent();
 
+ $app->configure('database');
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -103,6 +105,6 @@ $app->router->group([
 
 //$app->register(App\Providers\AppServiceProvider::class);
 
-$app->withEloquent();
+//$app->withEloquent();
 
 return $app;
