@@ -25,7 +25,8 @@ $router->get('/database', function () {
 });
 
 $router->get('/', function () use ($router) {
-    return response()->json(['success' => 'Welcome to PhoneWorld!']);
+    return view('home'); //$router->make('view')->make('home');
+//    return response()->json(['success' => 'Welcome to PhoneWorld!']);
 });
 
 $router->get('/api', function() use ($router) {
